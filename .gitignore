@@ -1,3 +1,4 @@
 #Ignore all .db and .sqlite files
 *.db
 *.sqlite
+node_modules

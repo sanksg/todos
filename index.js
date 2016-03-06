@@ -46,10 +46,10 @@ server.route({
 
 // *********************** Start the Server *************************
 Models.sequelize.sync().then(function() {
-//  server.start(function (err) {
-//    if (err) {
-//      throw err;
-//    }
-//    console.log('Main server running at:', server.connections[0].info.uri)
-//  });
+  server.start(function (err) {
+    if (err) {
+      throw err;
+    }
+    console.log('Main server running at:', server.connections[0].info.uri)
+  });
 });
