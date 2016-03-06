@@ -1,0 +1,3 @@
+#Ignore all .db and .sqlite files
+*.db
+*.sqlite
