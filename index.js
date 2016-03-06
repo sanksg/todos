@@ -1,0 +1,55 @@
+'use strict'
+
+const Hapi = require('hapi');
+const Inert = require('inert')
+const Path = require('path');
+const Hoek = require('hoek');
+const Vision = require('vision');
+const Joi = require('joi');
+const Boom = require('boom');
+
+console.log(__dirname)
+var Models = require(Path.join(__dirname, 'models', 'index.js'));
+
+
+
+
+//*************** Server ****************************
+var server = new Hapi.Server();
+
+server.connection({
+  host: 'localhost',
+  port: Number(process.argv[2] || 8080),
+  labels: "main"
+});
+
+// ************ Server Plugins  ********************
+server.register(Inert, (err) => {
+  Hoek.assert(!err, err);
+});
+
+server.register(Vision, (err) => {
+  Hoek.assert(!err, err);
+});
+
+// *************** Server Auth and Views ****************
+
+// ******************** Routes *************************
+server.route({
+  method: 'GET',
+  path: '/',
+  handler: function (request, reply) {
+    return reply('Hello TODOS');
+  }
+});
+
+
+// *********************** Start the Server *************************
+Models.sequelize.sync().then(function() {
+//  server.start(function (err) {
+//    if (err) {
+//      throw err;
+//    }
+//    console.log('Main server running at:', server.connections[0].info.uri)
+//  });
+});
