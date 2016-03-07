@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 *.sqlite
 *.db
 node_modules
+=======
+#Ignore all .db and .sqlite files
+*.db
+*.sqlite
+>>>>>>> 60ce83063fcb92fb5c50e77ce23bd46806b4aa84
