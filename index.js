@@ -46,7 +46,6 @@ server.route({
 
 // *********************** Start the Server *************************
 Models.sequelize.sync().then(function() {
-<<<<<<< HEAD
   server.start(function (err) {
     if (err) {
       throw err;
@@ -54,12 +53,3 @@ Models.sequelize.sync().then(function() {
     console.log('Main server running at:', server.connections[0].info.uri)
   });
 });
-=======
-//  server.start(function (err) {
-//    if (err) {
-//      throw err;
-//    }
-//    console.log('Main server running at:', server.connections[0].info.uri)
-//  });
-});
->>>>>>> 60ce83063fcb92fb5c50e77ce23bd46806b4aa84
