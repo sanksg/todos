@@ -1,0 +1,26 @@
+{
+  "name": "todo-demo",
+  "version": "0.0.0",
+  "description": "A simple REST API based ToDo app",
+  "main": "todo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:niix/hapi-rest-demo.git"
+  },
+  "author": "Sanks",
+  "dependencies": {
+    "hapi": "^13.0.0",
+    "joi": "^8.0.4",
+    "sequelize": "^3.19.13",
+    "sqlite3": "^3.1.1",
+    "vision": "^4.0.1",
+    "boom": "^3.1.2",
+    "hoek": "^3.0.4"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-nodemon": "^2.0.6",
+  }
