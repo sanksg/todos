@@ -12,20 +12,20 @@ module.exports = [
     path: '/api/users/{userName}',
     handler: api.userController.getByUserName
   },
-//  {
-//    method: 'POST',
-//    path: '/api/users/{userId}',
-//    handler: api.userController.postByUserId
-//  },
+  {
+    method: 'POST',
+    path: '/api/users/create',
+    handler: api.userController.createUser
+  },
 //  {
 //    method: 'PUT',
-//    path: '/api/users/{userId}',
-//    handler: api.userController.putByUserId 
+//    path: '/api/users/{userName}',
+//    handler: api.userController.updateUser
 //  },
 //  {
 //    method: 'DELETE',
-//    path: '/api/users/{userId}',
-//    handler: api.userController.delByUserId 
+//    path: '/api/users/{userName}',
+//    handler: api.userController.destroyUser 
 //  },
 //  // ------------------- Lists ----------------
 //  {

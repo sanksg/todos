@@ -28,7 +28,7 @@ server.connection({
 // *************** Server Auth and Views ****************
 
 // ******************** Routes *************************
-server.route(require('./lib/routes'));
+server.route(require('./api/routes'));
 
 
 // *********************** Start the Server *************************
